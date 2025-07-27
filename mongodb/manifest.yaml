@@ -43,6 +43,6 @@ spec:
         project: roboshop
         tier: database
   ports:
-    - protocal: TCP
+    - protocol: TCP
       port: 27017 # service port
       targetport: 27017 # container port
