@@ -27,3 +27,23 @@ spec:
       containers:
       - name: mongodb
         image:  shirisha104/mongodb:v1
+---
+apiVersion: apps/v1
+kind: Service
+metadata:
+   name: mongodb
+   namespace: roboshop
+   labels:
+     purpose: mongodb
+     project: roboshop
+     tier: database
+spec:
+  selector:
+     matchLabels:
+        purpose: mongodb
+        project: roboshop
+        tier: database
+  ports:
+    - protocal: TCP
+      port: 27017 # service port
+      targetport: 27017 # container port
