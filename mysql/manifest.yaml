@@ -3,7 +3,7 @@ kind: Secret
 metadata:
   name: mysql
   labels:
-    component: secret
+    component: mysql
     project: roboshop
     tier: database
 type: Opaque
