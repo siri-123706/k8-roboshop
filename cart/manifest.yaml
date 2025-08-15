@@ -5,7 +5,7 @@ metadata:
   namespace: roboshop
   labels:
     component: cart
-    project: roboshop
+    project: roboshop  
     tier: app
 data:
   REDIS_HOST: "redis"
@@ -14,7 +14,7 @@ data:
 ---
 apiVersion: apps/v1
 kind: Deployment
-metadata:
+metadata: 
   name: cart
   namespace: roboshop
   # deployment labels
@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
       - name: cart
-        image: joindevops/cart:v1
+        image: shirisha104/cart:v1
         envFrom:
         - configMapRef:
             name: cart
